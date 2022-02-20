@@ -37,10 +37,21 @@ function Resume() {
           </p>
           <p>군더더기 없이, 당신의 진짜 경쟁력을 드러 내 보세요.</p>
         </ResumeIntro>
+        <ResumeMiddle>
+          <img src="./images/ipad.png" alt="ipad" />
+          <h1>활용이 자유로운</h1>
+          <p>
+            PC/모바일 어디에서나 작성할 수 있고, PDF 파일로 저장과 활용이
+            쉽습니다.
+          </p>
+          <p>
+            가독성에 중점을 두고 설계하여, 파일 저장/출력시에도 돋보이는
+            결과물을 얻을 수 있습니다.
+          </p>
+        </ResumeMiddle>
       </ImageBox>
 
       <section />
-      <button onClick={click}>hi</button>
     </>
   );
 }
@@ -49,7 +60,8 @@ const HeadBox = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 100px 0;
+  padding-top: 100px;
+  padding-bottom: 40px;
   margin: auto 300px;
 `;
 const Head = styled.h1`
@@ -92,18 +104,56 @@ const ImageBox = styled.div`
   justify-content: center;
   flex-direction: column;
   width: 100vw;
+  position: relative;
+  img {
+    width: 600px;
+    margin: 0 auto;
+  }
+  img:nth-child(2) {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+  }
+  img:nth-child(3) {
+    /* width: 100%; */
+    /* height: 100px; */
+    /* object-fit: cover; */
+    padding-top: 404px;
+  }
 `;
 
+// const BusinessImage = styled.img`
+//   width: 600px;
+//   margin: 0 auto;
+// `;
+
+// const MainImage = styled.img`
+//   top: -15%;
+//   bottom: -49%;
+// `;
 const ResumeIntro = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  h1 {
+    padding-top: 150px;
+    font-size: 40px;
+    color: black;
+  }
+  p {
+    padding-top: 20px;
+    font-size: 18px;
+    color: black;
+    line-height: 1.9;
+    font-weight: 600;
+  }
 `;
-// const TopImage = styled.image`
-//   margin-top: -15%;
-// `;
 
-// const BottomImage = styled.image``;
+const ResumeMiddle = styled.div``;
 
 export default Resume;
