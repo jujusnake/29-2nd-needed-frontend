@@ -4,6 +4,7 @@ import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
 import Main from './pages/Main/Main';
 import JobList from './pages/JobList/JobList';
+import Resume from './pages/Resume/Resume';
 
 const Router = () => {
   return (
@@ -17,6 +18,7 @@ const Router = () => {
           path="/recruitments/:category/:subcategory"
           element={<JobList />}
         />
+        <Route path="/resume" element={<Resume />} />
       </Routes>
       <Footer />
     </BrowserRouter>
