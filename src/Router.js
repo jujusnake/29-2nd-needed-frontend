@@ -11,7 +11,7 @@ import Login from './pages/Login/Login';
 const Router = () => {
   return (
     <BrowserRouter>
-      <Nav />
+      {/* <Nav /> */}
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/recruitments" element={<JobList />} />

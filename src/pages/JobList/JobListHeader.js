@@ -1,8 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
 const JobsListHeader = ({ data, category, subcategory }) => {
+  const location = useLocation();
+  const query = location.search;
+
   return (
     <div>
       <Header>
@@ -10,7 +13,9 @@ const JobsListHeader = ({ data, category, subcategory }) => {
         <HeaderList>
           {category && (
             <HeaderItems active={!subcategory}>
-              <Link to={'/recruitments/' + category}>{data.title} 전체</Link>
+              <Link to={'/recruitments/' + category + query}>
+                {data.title} 전체
+              </Link>
             </HeaderItems>
           )}
           {data.categories.map(x => (
@@ -18,8 +23,8 @@ const JobsListHeader = ({ data, category, subcategory }) => {
               <Link
                 to={
                   x.linkto !== subcategory && category
-                    ? '/recruitments/' + category + '/' + x.linkto
-                    : '/recruitments/' + x.linkto
+                    ? '/recruitments/' + category + '/' + x.linkto + query
+                    : '/recruitments/' + x.linkto + query
                 }
               >
                 {x.category}
@@ -63,6 +68,7 @@ const HeaderItems = styled.li`
   line-height: 2.69;
   color: ${props =>
     props.active ? props => props.theme.themePurple : 'inherit'};
+  pointer-events: ${props => props.active && 'none'};
 `;
 
 export default JobsListHeader;

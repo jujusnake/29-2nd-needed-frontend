@@ -3,19 +3,15 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const JobCard = ({ data }) => {
-  const { id, position, company, province, country, image, isHighResponse } =
-    data;
+  const { id, name, company_name, province, country, image } = data;
 
   return (
     <Card>
       <Link to={'/recruitment/' + id}>
         <ImgContainer src={image} />
         <CardInfo>
-          <Position>{position}</Position>
-          <Company>{company}</Company>
-          {isHighResponse && (
-            <HighResponseBadge>응답률 매우 높음</HighResponseBadge>
-          )}
+          <Position>{name}</Position>
+          <Company>{company_name}</Company>
           <Location>
             {province} · {country}
           </Location>
