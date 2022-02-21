@@ -5,6 +5,8 @@ import Footer from './components/Footer/Footer';
 import Main from './pages/Main/Main';
 import JobList from './pages/JobList/JobList';
 import SignUp from './pages/Login/SignUp';
+import WantedPlusLanding from './pages/WantedPlus/WantedPlusLanding';
+import WantedPlusContents from './pages/WantedPlus/WantedPlusContents';
 
 const Router = () => {
   return (
@@ -19,6 +21,8 @@ const Router = () => {
           element={<JobList />}
         />
         <Route path="/signUp" element={<SignUp />} />
+        <Route path="/wantedPlus/landing" element={<WantedPlusLanding />} />
+        <Route path="/wantedPlus/contents" element={<WantedPlusContents />} />
       </Routes>
       <Footer />
     </BrowserRouter>
