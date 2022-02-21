@@ -3,9 +3,6 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 function Resume() {
-  const click = () => {
-    <Link to="/Components/ResumeDocuments" />;
-  };
   return (
     <>
       <div>
@@ -19,8 +16,12 @@ function Resume() {
             </p>
           </Body>
           <ButtonBox>
-            <Button onClick={click}>이력서 관리</Button>
-            <Button1 onClick={click}>새 이력서 작성</Button1>
+            <Link to="/newresume">
+              <Button>이력서 관리</Button>
+            </Link>
+            <Link to="/newresume">
+              <Button1>새 이력서 작성</Button1>
+            </Link>
           </ButtonBox>
         </HeadBox>
       </div>
@@ -123,26 +124,35 @@ const ImageBox = styled.div`
   }
 `;
 
-// const BusinessImage = styled.img`
-//   width: 600px;
-//   margin: 0 auto;
-// `;
-
-// const MainImage = styled.img`
-//   top: -15%;
-//   bottom: -49%;
-// `;
 const ResumeIntro = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: 50%;
+  top: 24%;
   left: 50%;
   transform: translate(-50%, -50%);
   h1 {
     padding-top: 150px;
+    font-size: 40px;
+    color: white;
+  }
+  p {
+    padding-top: 20px;
+    font-size: 18px;
+    color: white;
+    line-height: 1.9;
+    font-weight: 600;
+  }
+`;
+
+const ResumeMiddle = styled.div`
+  margin: 0 auto;
+  padding-top: 200px;
+
+  h1 {
+    padding-top: -250px;
     font-size: 40px;
     color: black;
   }
@@ -154,7 +164,5 @@ const ResumeIntro = styled.div`
     font-weight: 600;
   }
 `;
-
-const ResumeMiddle = styled.div``;
 
 export default Resume;
