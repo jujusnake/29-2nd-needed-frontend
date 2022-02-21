@@ -2,14 +2,14 @@ import React from 'react';
 import BannerItem from './BannerItem/BannerItem';
 import JobInfo from './JobInfo/JobInfo';
 import styled from 'styled-components';
-import FirstSlider from './ImageSlider/BannerSlider';
-import SecondSlider from './ImageSlider/VodSlider';
-import ThirdSlider from './ImageSlider/EventSlider';
+import BannerSlider from './ImageSlider/BannerSlider';
+import EventSlider from './ImageSlider/EventSlider';
+import VodSlider from './ImageSlider/VodSlider';
 
 function Main() {
   return (
     <div>
-      <FirstSlider />
+      <BannerSlider />
       <Box>
         <Banner>
           <span>
@@ -22,7 +22,7 @@ function Main() {
         <Title>직장인을 위한 wanted+</Title>
         <SubTitle>VOD 현직자들의 실전 인사이트가 필요하다면</SubTitle>
       </TitleBox>
-      <SecondSlider />
+      <VodSlider />
       <section>
         <SectionWrapper>
           <BannerTop>
@@ -41,7 +41,7 @@ function Main() {
           <Title>커리어 성장을 위한 맞춤 이벤트</Title>
           <SubTitle>회사 밖에서의 레벨업을 원한다면</SubTitle>
         </BottomTitleBox>
-        <ThirdSlider />
+        <EventSlider />
         <AdditionalInfo>
           <h1>채용 정보를 찾고 계셨나요?</h1>
           <JobInfo />
@@ -150,7 +150,7 @@ const AdditionalInfo = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 60px 0 80px;
+  padding: 50px 0 80px;
   border-top: 1px solid lightgray;
   & h1 {
     font-size: 22px;

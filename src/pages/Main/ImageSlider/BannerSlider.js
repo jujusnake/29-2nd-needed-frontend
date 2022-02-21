@@ -3,9 +3,9 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styled from 'styled-components';
-import FIRST_DATAS from './BANNER_DATAS';
+import BANNER_DATAS from './BANNER_DATAS';
 
-function FirstSlider() {
+function BannerSlider() {
   const settings = {
     arrows: true,
     infinite: true,
@@ -20,11 +20,11 @@ function FirstSlider() {
   return (
     <Container>
       <StyleSlider {...settings}>
-        {FIRST_DATAS.map(DATA => {
+        {BANNER_DATAS.map(data => {
           return (
-            <div key={DATA.id}>
+            <div key={data.id}>
               <ImageContainer>
-                <Image src={DATA.img} alt="제품이미지" />
+                <Image src={data.img} alt="제품이미지" />
               </ImageContainer>
             </div>
           );
@@ -34,7 +34,7 @@ function FirstSlider() {
   );
 }
 
-export default FirstSlider;
+export default BannerSlider;
 
 const Container = styled.div`
   overflow: hidden;

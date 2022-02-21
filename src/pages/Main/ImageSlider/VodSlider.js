@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styled from 'styled-components';
-import SECOND_DATAS from './VOD_DATAS';
+import VOD_DATAS from './VOD_DATAS';
 
 function VodSlider() {
   const settings = {
@@ -16,13 +16,13 @@ function VodSlider() {
   return (
     <Container>
       <StyleSlide {...settings}>
-        {SECOND_DATAS.map(DATA => (
-          <div key={DATA.id}>
+        {VOD_DATAS.map(data => (
+          <div key={data.id}>
             <Item className="test">
-              <Image src={DATA.img} alt="jobs" />
-              <Name>{DATA.name}</Name>
-              <Title>{DATA.title}</Title>
-              <Sub>{DATA.sub}</Sub>
+              <Image src={data.img} alt="jobs" />
+              <Name>{data.name}</Name>
+              <Title>{data.title}</Title>
+              <Sub>{data.sub}</Sub>
             </Item>
           </div>
         ))}
@@ -79,11 +79,10 @@ const Item = styled.div`
   line-height: 1.4;
 `;
 
-const Image = styled.image`
+const Image = styled.img`
   height: 100px;
   width: 100%;
   object-fit: cover;
-  background-color: green;
 `;
 
 const Name = styled.p`

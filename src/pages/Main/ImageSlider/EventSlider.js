@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styled from 'styled-components';
-import THIRD_DATAS from './EVENT_DATAS';
+import EVENT_DATAS from './EVENT_DATAS';
 
 function EventSlider() {
   const settings = {
@@ -16,13 +16,13 @@ function EventSlider() {
   return (
     <Container>
       <StyleSlide {...settings}>
-        {THIRD_DATAS.map(DATA => (
-          <div key={DATA.id}>
+        {EVENT_DATAS.map(data => (
+          <div key={data.id}>
             <Item>
-              <Image src="https://picsum.photos/520/250" alt="sidejobs" />
+              <Image src={data.img} alt="sidejobs" />
               <SubWrap>
-                <Sub>{DATA.sub}</Sub>
-                <Title>{DATA.title}</Title>
+                <Sub>{data.sub}</Sub>
+                <Title>{data.title}</Title>
               </SubWrap>
             </Item>
           </div>
@@ -75,16 +75,14 @@ const Item = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  border: 1px solid black;
   width: 400px;
   height: 270px;
 `;
-const Image = styled.image`
-  background-color: red;
+const Image = styled.img`
   width: 400px;
   height: 220px;
-  /* width: 100%;
-  object-fit: cover; */
+  /* width: 100%; */
+  object-fit: cover;
 `;
 
 const SubWrap = styled.div`
