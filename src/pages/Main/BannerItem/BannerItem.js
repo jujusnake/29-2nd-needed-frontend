@@ -5,11 +5,11 @@ import BANNERS_DATA from '../BANNERS_DATA';
 function BannerItem() {
   return (
     <Item>
-      {BANNERS_DATA.map(BANNER => (
-        <Banner key={BANNER.id}>
-          <i class={BANNER.img} />
-          <h3>{BANNER.title}</h3>
-          <h4>{BANNER.content}</h4>
+      {BANNERS_DATA.map(banner => (
+        <Banner key={banner.id}>
+          <i class={banner.img} />
+          <h3>{banner.title}</h3>
+          <h4>{banner.content}</h4>
         </Banner>
       ))}
     </Item>
