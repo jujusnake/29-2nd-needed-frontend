@@ -1,5 +1,7 @@
 # needed
 
+### [프로젝트 회고록 보기](https://velog.io/@jujusnake/needed-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%99%84%EC%84%B1-%ED%9A%8C%EA%B3%A0)
+
 ## 프로젝트 요약
 
 > 👉 I need YOU for the world’s leading companies!
@@ -36,7 +38,6 @@
 4. 소셜 로그인, 소셜 회원가입, 메인 페이지
 5. wanted+ 탭
 6. 마이페이지
-7. 검색
 
 ## 구성원 별 담당 역할
 
@@ -45,4 +46,4 @@
 | 곽승현 | 기업 페이지, footer, wanted+, 직군별연봉                |
 | 박무선 | 이력서 업로드, 메인 페이지, 소셜로그인                  |
 | 윤남주 | 이력서 업로드, 채용 페이지, 채용 상세페이지, 마이페이지 |
-| 장예지 | 소셜 로그인, Nav, 검색창                                |
+| 장예지 | 소셜 로그인, Nav                                |
