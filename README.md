@@ -1,6 +1,10 @@
 # needed
 
+### [배포된 웹사이트 보기](http://13.125.209.253:8000/)
+
 ### [프로젝트 회고록 보기](https://velog.io/@jujusnake/needed-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%99%84%EC%84%B1-%ED%9A%8C%EA%B3%A0)
+
+### [최종 결과물 영상 보기](https://www.youtube.com/watch?v=M3GQzZWPIxI)
 
 ## 프로젝트 요약
 
